@@ -1,8 +1,3 @@
----
-title: de.NBI24 BioHackathon
-
----
-
 # de.NBI24 BioHackathon
 ## [Project 6](https://www.denbi.de/de-nbi-events/1763-3rd-biohackathon-germany-increasing-interoperability)
 ### Misc:
@@ -16,6 +11,12 @@ title: de.NBI24 BioHackathon
       - [Cisco Client for MacOS](https://cloud.gerbi-gmb.de/f/1373896)
       - [Step-by-Step guides](https://www.uni-muenster.de/IT/services/kommunikation/vpn/index.html) from Uni Münster, how to set up VPN
       - VPN login credentials:***
+
+#### Table of Content:     
+1. [Subproject: Optimize RDF structure and URIs, packaging in subsets](#p1)
+2. [Subproject: Use Cases for subsetting RDF](#p2)
+3. [Subproject: Accessing RDF subsets](#p3)
+---
 #### P1: 
 #### Reviewing RDF Structure and URIs: Analyze and refine the current RDF structure and URIs to ensure they are optimized for production environments 
 #### Packaging subsets: Package subsets of RDF data in a RO-Crate format to foster sharing and data integration.
@@ -68,7 +69,8 @@ title: de.NBI24 BioHackathon
 - subset in ro-crate format
 
 ---
-#### P2: Subsetting RDF for Various Use Cases: Identify effective strategies to create subsets of the RDF data that cater to different research and application needs.
+#### P2: 
+#### Subsetting RDF for Various Use Cases: Identify effective strategies to create subsets of the RDF data that cater to different research and application needs.
 
 ##### Role & Responsibilities:
 
@@ -92,7 +94,8 @@ title: de.NBI24 BioHackathon
 - Prototypical SPARQL queries and/or SHEX (?)
 
 ---
-#### P3: Endpoint Drafting and Testing: Develop endpoints for SPARQL and bioschemas formats, aiming to facilitate the consumption of RDF subsets. Curate (meta)datasets and queries for testing and performance profiling. Conduct performance and scalability testing of these endpoints.
+#### P3: 
+#### Endpoint Drafting and Testing: Develop endpoints for SPARQL and bioschemas formats, aiming to facilitate the consumption of RDF subsets. Curate (meta)datasets and queries for testing and performance profiling. Conduct performance and scalability testing of these endpoints.
 
 #### Role & Responsibilities:
 
