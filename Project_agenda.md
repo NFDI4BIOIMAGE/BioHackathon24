@@ -70,8 +70,8 @@
 
 ##### Role & Responsibilities:
 
-- Tom
-- Torsten
+- Tom Boissonnet
+- Torsten Stöter
 
 ##### Goal:
 
@@ -95,8 +95,8 @@
 
 #### Role & Responsibilities:
 
-- Carsten (lead)
-- Mariana (lead)
+- Carsten Fortmann-Grote (lead)
+- Mariana Meireles (lead)
 
 #### Goals:
 
