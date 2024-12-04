@@ -6,11 +6,7 @@
     - upload instance 10.14.28.137 with 2TB storage
     - developer instance 10.14.28.177 with 250GB storage
     - **Requires VPN. Requires some setup beforehand.**
-      - VPN client installation (Cisco)
-      - Linux instructions: https://www.uni-muenster.de/IT/services/kommunikation/vpn/linuxoc.html
-      - [Cisco Client for MacOS](https://cloud.gerbi-gmb.de/f/1373896)
-      - [Step-by-Step guides](https://www.uni-muenster.de/IT/services/kommunikation/vpn/index.html) from Uni Münster, how to set up VPN
-      - VPN login credentials:***
+      - information will follow
 
 #### Table of Content:     
 1. [Subproject: Optimize RDF structure and URIs, packaging in subsets](#p1)
