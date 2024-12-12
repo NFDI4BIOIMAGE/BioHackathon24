@@ -45,6 +45,16 @@ authors_short: J. Moore, S. Dvoretskii
 
 TBD
 
+# Goal 3: Endpoint Drafting and Testing
+## Motivation 
+### Virtual vs. Material
+## Previous work on triplestore/sparql endpoint testing
+## Benchmark strategy
+## Test environment
+## Results
+## Discussion
+
+
 # **Funding**
 
 **NFDI4BIOIMAGE** is funded by DFG grant number NFDI 46/1, project number
