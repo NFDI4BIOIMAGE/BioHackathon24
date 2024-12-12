@@ -12,6 +12,9 @@ authors:
   - name: Stefan Dvoretskii
     orcid: 0000-0001-7769-0167
     affiliation: 4
+  - name: Carsten Fortmann-Grote
+    orcid: 0000-0002-2579-5546
+    affiliation: 5
 affiliations:
   - name: German BioImaging e.V., University of Konstanz, Germany
     index: 1
@@ -21,6 +24,8 @@ affiliations:
     index: 3
   - name: DKFZ Division of Medical Computing
     index: 4
+  - name: Max Planck Institute for Evolutionary Biology
+    index: 5
 date: 12 December 2024
 cito-bibliography: paper.bib
 event: Biohackathon
@@ -29,7 +34,6 @@ biohackathon_url: https://www.denbi.de/de-nbi-events/1678-biohackathon-germany-3
 biohackathon_location: "Kassel, Germany, 2024"
 group: Group 6
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/biohackathon-swat4hcls/swat4hcls-2024--publishing-fair-datasets-from-bioimaging-repositories.git
 git_url: https://github.com/NFDI4BIOIMAGE/BioHackathon24.git
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
