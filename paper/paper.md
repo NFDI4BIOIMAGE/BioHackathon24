@@ -59,28 +59,22 @@ endpoint implementations by running a series of 10 SPARQL queries multiple times
 and on graphs of varying size. The methodology and results are presented below.
 
 #### Motivation ####
-Making RDF data publically accessible is typically achieved by running a web
-server that accepts SPARQL queries via the http protocol and returns the query
-results. Such a SPARQL endpoint often features an online query form to enter the
-bespoke query and to visualize the results in an html table. Well known examples
-are the Wikidata service at
-[http://sparql.wikidata.org](http://sparql.wikidata.org) or the Uniprot endpoint
-at [https://sparql.uniprot.org](https://sparql.uniprot.org).
-
-#### Triplestores and endpoints
-Numerous opensource and commercial software packages implementing this
-architecture exist, examples are [Virtuoso](https://www.openlinksw.com/) ,
-[Apache Jena-Fuseki](https://jena.apache.org/documentation/fuseki2/) package,
+Designing a web resource to expose Bioimage metadata in RDF format requires choosing a suitable semantic database
+backend. Numerous opensource and commercial software packages exist that combine a graph database (also known as "triplestore")
+and a query entry form.
+Examples include but are not limited to [Virtuoso](https://www.openlinksw.com/) ,
+[Apache Jena-Fuseki](https://jena.apache.org/documentation/fuseki2/),
 [GraphDB](https://graphdb.ontotext.com/),
 [qLever](https://github.com/ad-freiburg/QLever) [@Bast2017],
 [Blazegraph](https://blazegraph.com),
 [Anzograph](https://docs.cambridgesemantics.com/anzograph),
 [Allegrograph](https://allegrograph.com), and
-[Stardog](https://www.stardog.com). Whereas these examples store the RDF data in
-a dedicated semantic database (triplestore), other solutions connect to a
-relational database (RDB) in a process called Virtualization. Virtualization
-maps the tabular structure of the RDB to a RDF graph by virtue of R2RML
-mappings, a w3c standard. Examples listed in the [R2RML implementation
+[Stardog](https://www.stardog.com). 
+
+Other solutions take on a different approach. Instead of storing the data in a dedicated graph database,
+the data lives in a relational database (RDB). In a process called virtualization,
+the tabular structure of the RDB is mapped to a RDF graph by virtue of R2RML
+mappings, a W3C standard [@r2rml]. Examples listed in the [R2RML implementation
 report](https://rml.io/r2rml-implementation-report) are
 [Ontop-VKG](https://ontop-vkg.org),
 [R2RML-F](https://github.com/chrdebru/r2rml),
@@ -88,6 +82,9 @@ report](https://rml.io/r2rml-implementation-report) are
 [Db2triples](https://github.com/antidot/db2triples),
 [Morph-KGC](https://morph.oeg.fi.upm.es/tool/morph-kgc), or
 [RMLMapper](https://github.com/rmlio/rmlmapper-java).
+
+The latter approach is attractive in situations where a relational database already exists, e.g. as the database backend of a web service. In the case of OMERO, this is
+precisely the case: All image metadata and container objects (projects, datasets, plates), are represented in a postgresql relational database.
 
 #### Knowledge graph construction for OMERO: Materialization vs. Virtualization
 In the context of exposing OMERO metadata through a SPARQL endpoint, we have to
@@ -101,8 +98,7 @@ virtualization avoids the step of generating a RDF graph as an intermediate
 artifact and instead maps the relational database "live" to a RDF
 representation. In other words, Virtualization keeps all data in its original
 place, no duplication takes place. On the other hand, it must be expected that
-the additional steps of mapping incoming SPARQL queries to SQL (the query
-language for relational databases) and rewriting the SQL response into RDF makes
+the additional steps of mapping incoming SPARQL queries to SQL  and rewriting the SQL response into RDF makes
 a virtual KG less performant than a materialized KG that operates directly on
 graph data. The purpose of this study is hence to compare a virtual KG to a
 materialized KG in terms of query response time as a metric for overall
@@ -120,7 +116,7 @@ irrelevant for a VKG, we omitted this metric from our assessments.
 Virtuoso was chosen because it came out as the most performant triplestore and SPARQL endpoint
 in many of Addlesee's benchmarks. Fuseki was added because it is
 missing in Addlesee's blog post despite  being widely distributed in test and development settings thanks to 
-how easy it is to setup and to execute.
+its simple setup and execution.
 
 #### Benchmark procedure ####
 To measure the query response time, we executed the SPARQL query client utility `rsparql`, part
